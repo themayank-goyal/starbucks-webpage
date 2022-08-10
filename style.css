@@ -6,8 +6,278 @@ FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
 * {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
- 
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.navbar {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.logo {
+  margin-right: 2.5rem;
+}
+
+.navbar__pages,
+.navbar__buttons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar__buttons > button {
+  border: 1px solid black;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+}
+
+.navbar__buttons > a {
+  font-size: 1.4rem;
+}
+
+.btnJoin {
+  background-color: black;
+  color: white;
+}
+
+.navbar__pages > img {
+  width: 15%;
+}
+
+.navbar__pages > a {
+  text-decoration: none;
+}
+
+.heading {
+  background-color: #1e3932;
+}
+
+.heading > h3 {
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+.hero {
+  position: relative;
+  background-color: #d4e9e2;
+  z-index: -1;
+  background-image: url('./images/xl-hero-desktop_2021.png');
+  background-position: cover;
+  background: right center / contain no-repeat
+    url('./images/xl-hero-desktop_2021.png');
+  background-size: 140% 100%;
+  background-position: 50%;
+  height: 80vh;
+}
+
+.hero__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+}
+
+.hero__heading {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  color: #333;
+}
+
+.hero__heading > h1 {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+}
+
+.hero__heading > p {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.hero__heading > button {
+  width: 30%;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  border: none;
+  background-color: #008248;
+  color: white;
+  margin-top: 2rem;
+}
+
+.hero__content > img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(20%);
+  width: 110%;
+}
+
+.footer__linksGrid {
+  display: flex;
+  gap: 5rem;
+  padding: 1.5rem;
+  margin: 8rem 0;
+  margin-left: 2.5%;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.links > span {
+  color: #777;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.links > span:hover {
+  color: black;
+}
+
+.offer-card {
+  background-color: #f3f1e7;
+}
+
+.offer__heading,
+.start__heading {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 4rem;
+  margin-bottom: 1rem;
+}
+
+.offer__heading > p {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offer__row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.offer__step {
+  display: flex;
+  gap: 2rem;
+  width: 30%;
+}
+
+.offer__step > img {
+  width: 25%;
+}
+
+.offer__stepsHeading {
+  margin-right: 10rem;
+}
+
+.offer__stepsHeading > h1 {
+  font-size: 2rem;
+}
+.offer__content > p,
+.offer__stepsHeading > p {
+  font-size: 1.4rem;
+}
+
+.offer__content > h1 {
+  font-size: 1.8rem;
+}
+
+.start__steps {
+  display: flex;
+  margin-bottom: 9rem;
+}
+
+.start__steps > div {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem;
+}
+
+.start__steps > div > img {
+  width: 15%;
+}
+
+.start__steps > div > div {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 50rem) {
+  .offer__row{
+    flex-wrap: wrap;
+  }
+  .offer__stepsHeading {
+    flex-basis: 100%;
+  }
+  .offer__step {
+    width: 40%;
+  }
+}
+
+@media (max-width: 38rem) {
+  .start__steps{
+    flex-direction: column;
+  }
+  .offer__grid{
+    padding: 1.5rem;
+  }
+  .offer__row{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .offer__step{
+    width: 100%;
+  }
+  .footer__linksGrid{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: left; */
+  }
+  .links {
+    align-items: center;
+  }
+}
